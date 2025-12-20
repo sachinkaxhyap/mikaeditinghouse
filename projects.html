@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Gallery | Mika Editing House</title>
+    <meta name="description" content="Explore our portfolio of video editing projects - weddings, corporate films, music videos, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body class="projects-page">
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">MIKA</span>
+                <span class="logo-sub">EDITING HOUSE</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="index.html#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="index.html#reviews" class="nav-link">Reviews</a></li>
+                <li><a href="index.html#contact" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="gallery-header">
+        <div class="header-content">
+            <a href="index.html" class="back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Home
+            </a>
+            <h1 class="gallery-title">Projects</h1>
+            <p class="gallery-subtitle">A curated collection of our finest work</p>
+        </div>
+    </header>
+
+    <!-- Category Filter -->
+    <section class="category-filter">
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="wedding">Wedding</button>
+            <button class="filter-btn" data-filter="corporate">Corporate</button>
+            <button class="filter-btn" data-filter="music">Music</button>
+            <button class="filter-btn" data-filter="social">Social</button>
+            <button class="filter-btn" data-filter="documentary">Documentary</button>
+            <button class="filter-btn" data-filter="event">Event</button>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <main class="projects-gallery">
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <article class="project-card" data-category="wedding">
+                <div class="project-thumbnail">
+                    <div class="thumbnail-placeholder">
+                        <div class="placeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+                            </svg>
+                        </div>
+                        <span class="placeholder-text">Wedding Film</span>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5.14v14l11-7-11-7z"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Raj & Simran</h3>
+                    <span class="project-category">Wedding Film</span>
+                    <span class="project-year">2024</span>
+                </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card" data-category="corporate">
+                <div class="project-thumbnail">
+                    <div class="thumbnail-placeholder">
+                        <div class="placeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/>
+                            </svg>
+                        </div>
+                        <span class="placeholder-text">Corporate</span>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5.14v14l11-7-11-7z"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">TechCorp Brand Story</h3>
+                    <span class="project-category">Corporate</span>
+                    <span class="project-year">2024</span>
+                </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card" data-category="music">
+                <div class="project-thumbnail">
+                    <div class="thumbnail-placeholder">
+                        <div class="placeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z"/>
+                            </svg>
+                        </div>
+                        <span class="placeholder-text">Music Video</span>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5.14v14l11-7-11-7z"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Midnight Dreams</h3>
+                    <span class="project-category">Music Video</span>
+                    <span class="project-year">2024</span>
+                </div>
+            </article>
+
+            <!-- Project 4 -->
+            <article class="project-card" data-category="wedding">
+                <div class="project-thumbnail">
+                    <div class="thumbnail-placeholder">
+                        <div class="placeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+                            </svg>
+                        </div>
+                        <span class="placeholder-text">Wedding Film</span>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5.14v14l11-7-11-7z"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Arjun & Meera</h3>
+                    <span class="project-category">Wedding Film</span>
+                    <span class="project-year">2024</span>
+                </div>
+            </article>
+
+            <!-- Project 5 -->
+            <article class="project-card" data-category="documentary">
+                <div class="project-thumbnail">
+                    <div class="thumbnail-placeholder">
+                        <div class="placeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z"/>
+                            </svg>
+                        </div>
+                        <span class="placeholder-text">Documentary</span>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5.14v14l11-7-11-7z"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Voices of Punjab</h3>
+                    <span class="project-category">Documentary</span>
+                    <span class="project-year">2023</span>
+                </div>
+            </article>
+
+            <!-- Project 6 -->
+            <article class="project-card" data-category="social">
+                <div class="project-thumbnail">
+                    <div class="thumbnail-placeholder">
+                        <div class="placeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+                            </svg>
+                        </div>
+                        <span class="placeholder-text">Social Media</span>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5.14v14l11-7-11-7z"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Viral Reel Campaign</h3>
+                    <span class="project-category">Social Media</span>
+                    <span class="project-year">2024</span>
+                </div>
+            </article>
+
+            <!-- Project 7 -->
+            <article class="project-card" data-category="event">
+                <div class="project-thumbnail">
+                    <div class="thumbnail-placeholder">
+                        <div class="placeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z"/>
+                            </svg>
+                        </div>
+                        <span class="placeholder-text">Event</span>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5.14v14l11-7-11-7z"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Tech Summit 2024</h3>
+                    <span class="project-category">Event</span>
+                    <span class="project-year">2024</span>
+                </div>
+            </article>
+
+            <!-- Project 8 -->
+            <article class="project-card" data-category="corporate">
+                <div class="project-thumbnail">
+                    <div class="thumbnail-placeholder">
+                        <div class="placeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z"/>
+                            </svg>
+                        </div>
+                        <span class="placeholder-text">Corporate</span>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5.14v14l11-7-11-7z"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Startup Launch</h3>
+                    <span class="project-category">Corporate</span>
+                    <span class="project-year">2023</span>
+                </div>
+            </article>
+
+            <!-- Project 9 -->
+            <article class="project-card" data-category="music">
+                <div class="project-thumbnail">
+                    <div class="thumbnail-placeholder">
+                        <div class="placeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z"/>
+                            </svg>
+                        </div>
+                        <span class="placeholder-text">Music Video</span>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5.14v14l11-7-11-7z"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Electric Soul</h3>
+                    <span class="project-category">Music Video</span>
+                    <span class="project-year">2023</span>
+                </div>
+            </article>
+
+            <!-- Project 10 -->
+            <article class="project-card" data-category="wedding">
+                <div class="project-thumbnail">
+                    <div class="thumbnail-placeholder">
+                        <div class="placeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+                            </svg>
+                        </div>
+                        <span class="placeholder-text">Wedding Film</span>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5.14v14l11-7-11-7z"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Kabir & Tara</h3>
+                    <span class="project-category">Wedding Film</span>
+                    <span class="project-year">2023</span>
+                </div>
+            </article>
+
+            <!-- Project 11 -->
+            <article class="project-card" data-category="documentary">
+                <div class="project-thumbnail">
+                    <div class="thumbnail-placeholder">
+                        <div class="placeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z"/>
+                            </svg>
+                        </div>
+                        <span class="placeholder-text">Documentary</span>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5.14v14l11-7-11-7z"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">The Artisans</h3>
+                    <span class="project-category">Documentary</span>
+                    <span class="project-year">2023</span>
+                </div>
+            </article>
+
+            <!-- Project 12 -->
+            <article class="project-card" data-category="social">
+                <div class="project-thumbnail">
+                    <div class="thumbnail-placeholder">
+                        <div class="placeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                <path d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+                            </svg>
+                        </div>
+                        <span class="placeholder-text">Social Media</span>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5.14v14l11-7-11-7z"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Brand Reels Bundle</h3>
+                    <span class="project-category">Social Media</span>
+                    <span class="project-year">2023</span>
+                </div>
+            </article>
+        </div>
+
+        <!-- No Results Message -->
+        <div class="no-results" id="noResults">
+            <p>No projects found in this category.</p>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="gallery-cta">
+        <div class="cta-content">
+            <h2>Have a Project in Mind?</h2>
+            <p>Let's create something extraordinary together</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/919876543210" class="btn btn-primary" target="_blank" rel="noopener">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    WhatsApp Us
+                </a>
+                <a href="index.html#contact" class="btn btn-secondary">
+                    Get a Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer gallery-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mika Editing House. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="modal-video">
+                <div class="video-placeholder">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"/>
+                    </svg>
+                    <p>Video Player Placeholder</p>
+                </div>
+            </div>
+            <div class="modal-info">
+                <h3 id="modalTitle">Project Title</h3>
+                <span id="modalCategory">Category</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="projects.js"></script>
+</body>
+</html>
+

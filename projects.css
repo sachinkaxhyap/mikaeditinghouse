@@ -1,0 +1,610 @@
+/* ========================================
+   PROJECTS GALLERY PAGE - Inspired by wanda.net
+   Clean, Minimal, Grid-Based Design
+   ======================================== */
+
+/* Page Base */
+.projects-page {
+    background: var(--color-black);
+    min-height: 100vh;
+}
+
+/* ========================================
+   GALLERY HEADER
+   ======================================== */
+.gallery-header {
+    padding: 140px var(--container-padding) 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(ellipse 50% 50% at 50% 0%, rgba(40, 40, 40, 0.4) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--color-gray-500);
+    text-decoration: none;
+    margin-bottom: 32px;
+    transition: color var(--transition-base);
+}
+
+.back-link:hover {
+    color: var(--color-white);
+}
+
+.back-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+.gallery-title {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 400;
+    color: var(--color-white);
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+    opacity: 0;
+    animation: titleReveal 0.8s ease forwards 0.2s;
+}
+
+@keyframes titleReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gallery-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-gray-500);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    opacity: 0;
+    animation: titleReveal 0.8s ease forwards 0.4s;
+}
+
+/* ========================================
+   CATEGORY FILTER
+   ======================================== */
+.category-filter {
+    padding: 0 var(--container-padding) 60px;
+    opacity: 0;
+    animation: titleReveal 0.8s ease forwards 0.5s;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    background: transparent;
+    border: 1px solid var(--color-gray-800);
+    border-radius: 100px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--color-gray-500);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.filter-btn:hover {
+    border-color: var(--color-gray-600);
+    color: var(--color-gray-300);
+}
+
+.filter-btn.active {
+    background: var(--color-white);
+    border-color: var(--color-white);
+    color: var(--color-black);
+}
+
+/* ========================================
+   PROJECTS GRID - Wanda.net Inspired
+   ======================================== */
+.projects-gallery {
+    padding: 0 var(--container-padding) 80px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+}
+
+/* Project Card */
+.project-card {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    animation: cardReveal 0.6s ease forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.15s; }
+.project-card:nth-child(3) { animation-delay: 0.2s; }
+.project-card:nth-child(4) { animation-delay: 0.25s; }
+.project-card:nth-child(5) { animation-delay: 0.3s; }
+.project-card:nth-child(6) { animation-delay: 0.35s; }
+.project-card:nth-child(7) { animation-delay: 0.4s; }
+.project-card:nth-child(8) { animation-delay: 0.45s; }
+.project-card:nth-child(9) { animation-delay: 0.5s; }
+.project-card:nth-child(10) { animation-delay: 0.55s; }
+.project-card:nth-child(11) { animation-delay: 0.6s; }
+.project-card:nth-child(12) { animation-delay: 0.65s; }
+
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.project-card.hidden {
+    display: none;
+}
+
+/* Thumbnail */
+.project-thumbnail {
+    position: absolute;
+    inset: 0;
+}
+
+.thumbnail-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(145deg, #1a1a1a 0%, #0d0d0d 100%);
+    transition: all var(--transition-slow);
+}
+
+.placeholder-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.placeholder-icon svg {
+    width: 24px;
+    height: 24px;
+    color: var(--color-gray-600);
+    transition: color var(--transition-base);
+}
+
+.placeholder-text {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-gray-700);
+    transition: color var(--transition-base);
+}
+
+/* Overlay */
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0);
+    transition: all var(--transition-base);
+}
+
+.overlay-content {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all var(--transition-base);
+}
+
+.play-btn {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    border-radius: 50%;
+    transition: transform var(--transition-base);
+}
+
+.play-btn svg {
+    width: 24px;
+    height: 24px;
+    color: var(--color-black);
+    margin-left: 4px;
+}
+
+/* Project Info */
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+    transform: translateY(100%);
+    transition: transform var(--transition-base);
+}
+
+.project-title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--color-white);
+    margin-bottom: 4px;
+}
+
+.project-category {
+    font-size: 0.75rem;
+    color: var(--color-gray-400);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.project-year {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.7rem;
+    color: var(--color-gray-500);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+/* Hover Effects */
+.project-card:hover .thumbnail-placeholder {
+    transform: scale(1.05);
+}
+
+.project-card:hover .placeholder-icon svg {
+    color: var(--color-gray-400);
+}
+
+.project-card:hover .placeholder-text {
+    color: var(--color-gray-500);
+}
+
+.project-card:hover .project-overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.project-card:hover .overlay-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.project-card:hover .play-btn:hover {
+    transform: scale(1.1);
+}
+
+.project-card:hover .project-info {
+    transform: translateY(0);
+}
+
+.project-card:hover .project-year {
+    opacity: 1;
+}
+
+/* No Results */
+.no-results {
+    display: none;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.no-results.visible {
+    display: block;
+}
+
+.no-results p {
+    font-size: 1.1rem;
+    color: var(--color-gray-500);
+}
+
+/* ========================================
+   CTA SECTION
+   ======================================== */
+.gallery-cta {
+    padding: 100px var(--container-padding);
+    text-align: center;
+    background: linear-gradient(to bottom, var(--color-black) 0%, var(--color-darker) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.gallery-cta h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 400;
+    color: var(--color-white);
+    margin-bottom: 12px;
+}
+
+.gallery-cta p {
+    font-size: 1.1rem;
+    color: var(--color-gray-500);
+    margin-bottom: 32px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ========================================
+   GALLERY FOOTER
+   ======================================== */
+.gallery-footer {
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gallery-footer .footer-bottom {
+    border: none;
+    padding: 0;
+}
+
+/* ========================================
+   VIDEO MODAL
+   ======================================== */
+.video-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+}
+
+.video-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.video-modal .modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.video-modal .modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    background: var(--color-gray-900);
+    border-radius: 12px;
+    overflow: hidden;
+    transform: scale(0.95) translateY(20px);
+    transition: transform var(--transition-base);
+}
+
+.video-modal.active .modal-content {
+    transform: scale(1) translateY(0);
+}
+
+.video-modal .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    z-index: 10;
+}
+
+.video-modal .modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.video-modal .modal-close svg {
+    width: 20px;
+    height: 20px;
+    color: var(--color-white);
+}
+
+.modal-video {
+    aspect-ratio: 16 / 9;
+    background: var(--color-black);
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: linear-gradient(145deg, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+.video-placeholder svg {
+    width: 80px;
+    height: 80px;
+    color: var(--color-gray-600);
+}
+
+.video-placeholder p {
+    font-size: 0.9rem;
+    color: var(--color-gray-600);
+}
+
+.video-modal .modal-info {
+    padding: 24px 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.video-modal .modal-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-white);
+    margin-bottom: 4px;
+}
+
+.video-modal .modal-info span {
+    font-size: 0.8rem;
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gallery-header {
+        padding: 120px var(--container-padding) 40px;
+    }
+    
+    .project-info {
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+    }
+    
+    .project-year {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1px;
+    }
+    
+    .gallery-title {
+        font-size: 3rem;
+    }
+    
+    .filter-container {
+        gap: 8px;
+    }
+    
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+    
+    .play-btn {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .play-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .video-modal {
+        padding: 20px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   REDUCED MOTION
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+    .gallery-title,
+    .gallery-subtitle,
+    .category-filter,
+    .project-card {
+        animation: none;
+        opacity: 1;
+    }
+    
+    .project-card,
+    .thumbnail-placeholder,
+    .project-overlay,
+    .overlay-content,
+    .project-info {
+        transition: none;
+    }
+}
+
