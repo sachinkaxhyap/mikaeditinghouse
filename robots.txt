@@ -1,5 +1,5 @@
 # robots.txt for Mika Editing House
-# https://www.mikaeditinghouse.com/robots.txt
+# https://mikaeditinghouse.kaxhyap.com/robots.txt
 
 User-agent: *
 Allow: /
@@ -9,7 +9,7 @@ Allow: /
 # Disallow: /private/
 
 # Sitemap location
-Sitemap: https://www.mikaeditinghouse.com/sitemap.xml
+Sitemap: https://mikaeditinghouse.kaxhyap.com/sitemap.xml
 
 # Crawl-delay (optional, adjust as needed)
 # Crawl-delay: 1

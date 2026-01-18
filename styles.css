@@ -266,6 +266,10 @@ body {
     font-weight: 600;
     color: var(--color-white);
     letter-spacing: 0.1em;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .logo-sub {
@@ -274,6 +278,10 @@ body {
     color: var(--color-gray-500);
     letter-spacing: 0.25em;
     text-transform: uppercase;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .nav-menu {
@@ -363,8 +371,9 @@ body {
    ======================================== */
 .hero {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     position: relative;
     overflow: hidden;
@@ -399,9 +408,25 @@ body {
     position: relative;
     z-index: 1;
     text-align: center;
+    width: 100%;
     max-width: 900px;
     padding: var(--space-3xl) var(--container-padding);
+    display: flex;
+    flex-direction: column;
     animation: fadeInUp 1s ease forwards;
+}
+
+.hero-top {
+    flex-shrink: 0;
+}
+
+.hero-spacer {
+    flex: 1;
+    min-height: var(--space-xl);
+}
+
+.hero-bottom {
+    flex-shrink: 0;
 }
 
 @keyframes fadeInUp {
@@ -425,6 +450,7 @@ body {
     border-radius: var(--radius-full);
     font-size: 0.85rem;
     color: var(--color-gray-300);
+    margin-top: var(--space-lg);
     margin-bottom: var(--space-xl);
     animation: fadeInUp 1s ease 0.1s forwards;
     opacity: 0;
@@ -480,8 +506,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--space-xl);
-    padding: var(--space-xl);
+    gap: var(--space-lg);
+    padding: var(--space-lg);
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-lg);
@@ -496,13 +522,13 @@ body {
 .highlight-number {
     display: block;
     font-family: var(--font-heading);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--color-white);
 }
 
 .highlight-label {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: var(--color-gray-500);
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -510,7 +536,7 @@ body {
 
 .highlight-divider {
     width: 1px;
-    height: 40px;
+    height: 32px;
     background: var(--color-gray-700);
 }
 
@@ -1486,7 +1512,9 @@ body {
         align-items: flex-start;
         gap: 0;
         padding: 100px var(--space-xl) var(--space-xl);
-        background: var(--color-dark);
+        background: rgba(10, 10, 10, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         border-left: 1px solid var(--glass-border);
         transition: right var(--transition-base);
     }
@@ -1515,9 +1543,14 @@ body {
     }
     
     /* Hero */
+    .hero-content {
+        padding-top: 100px;
+        padding-bottom: var(--space-2xl);
+    }
+    
     .hero-highlights {
         flex-direction: column;
-        gap: var(--space-lg);
+        gap: var(--space-md);
     }
     
     .highlight-divider {
@@ -1581,8 +1614,31 @@ body {
         font-size: 2.25rem;
     }
     
+    .hero-content {
+        padding-top: 80px;
+        padding-bottom: var(--space-xl);
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+    
     .hero-actions {
         flex-direction: column;
+        margin-bottom: var(--space-xl);
+    }
+    
+    .hero-highlights {
+        padding: var(--space-md);
+        gap: var(--space-sm);
+    }
+    
+    .highlight-number {
+        font-size: 1.25rem;
+    }
+    
+    .highlight-label {
+        font-size: 0.65rem;
     }
     
     .btn {
